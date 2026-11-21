@@ -172,7 +172,7 @@ Semua form memakai Form Request (validasi + `authorize`) dan proteksi CSRF.
 
 ## 12. Jawaban lima pertanyaan refleksi (D6)
 
-Lihat `docs/D6_Jawaban_Refleksi.docx`.
+Lihat `docs/Jawaban_Refleksi.pdf`.
 
 ## 13. Alokasi waktu (diisi oleh kandidat)
 
