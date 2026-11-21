@@ -1,0 +1,3 @@
+# AI_USAGE
+
+Dalam proses pengembangan proyek, saya menggunakan **Claude (Anthropic)** sebagai asisten AI untuk membantu aktivitas pemrograman (*coding assistant*). AI dimanfaatkan untuk membantu mengimplementasikan algoritma pada fitur-fitur yang dikembangkan, memberikan referensi solusi teknis, serta mengidentifikasi dan menyelesaikan error atau kendala pada kode program (*debugging*). Seluruh hasil bantuan AI tetap ditinjau, disesuaikan, dan diuji kembali agar implementasinya sesuai dengan kebutuhan serta logika sistem yang dirancang.

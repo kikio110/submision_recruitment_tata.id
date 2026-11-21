@@ -1,0 +1,38 @@
+<?php
+use App\Http\Controllers\{ActivityController, EvidenceSubmissionController, AttentionController, DashboardController, DataManagementController, FollowUpController, ProjectController, SettingsController, UserSwitchController};
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', fn () => redirect()->route('dashboard'));
+Route::post('/switch-user', UserSwitchController::class)->name('user.switch');
+Route::get('/dashboard', DashboardController::class)->name('dashboard');
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
+Route::get('/projects/create', [ProjectController::class, 'create'])->name('projects.create');
+Route::post('/projects', [ProjectController::class, 'store'])->name('projects.store');
+Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
+Route::get('/projects/{project}/edit', [ProjectController::class, 'edit'])->name('projects.edit');
+Route::put('/projects/{project}', [ProjectController::class, 'update'])->name('projects.update');
+Route::delete('/projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
+Route::get('/projects/{project}/report', [ProjectController::class, 'reportForm'])->name('projects.report.form');
+Route::post('/projects/{project}/report', [ProjectController::class, 'report'])->name('projects.report');
+Route::get('/projects/{project}/attention', [AttentionController::class, 'show'])->name('projects.attention');
+Route::get('/attention', [AttentionController::class, 'index'])->name('attention.index');
+Route::get('/follow-ups', [FollowUpController::class, 'index'])->name('follow-ups.index');
+Route::get('/follow-ups/create', [FollowUpController::class, 'create'])->name('follow-ups.create');
+Route::post('/follow-ups', [FollowUpController::class, 'store'])->name('follow-ups.store');
+Route::get('/follow-ups/{followUp}', [FollowUpController::class, 'show'])->name('follow-ups.show');
+Route::put('/follow-ups/{followUp}', [FollowUpController::class, 'update'])->name('follow-ups.update');
+Route::post('/follow-ups/{followUp}/status', [FollowUpController::class, 'status'])->name('follow-ups.status');
+Route::post('/follow-ups/{followUp}/notes', [FollowUpController::class, 'note'])->name('follow-ups.note');
+Route::post('/follow-ups/{followUp}/verify', [FollowUpController::class, 'verify'])->name('follow-ups.verify');
+Route::get('/data-management', [DataManagementController::class, 'index'])->name('data.index');
+Route::post('/data-management/reprocess', [DataManagementController::class, 'reprocess'])->name('data.reprocess');
+Route::get('/data-management/imports', [DataManagementController::class, 'imports'])->name('data.imports');
+Route::get('/data-management/imports/{batch}', [DataManagementController::class, 'show'])->name('data.imports.show');
+Route::get('/activity', ActivityController::class)->name('activity.index');
+Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
+Route::post('/settings', [SettingsController::class, 'update'])->name('settings.update');
+Route::get('/projects/{project}/evidence/create', [EvidenceSubmissionController::class, 'create'])->name('evidence.create');
+Route::post('/projects/{project}/evidence', [EvidenceSubmissionController::class, 'store'])->name('evidence.store');
+Route::get('/evidence-submissions', [EvidenceSubmissionController::class, 'index'])->name('evidence.index');
+Route::post('/evidence-submissions/{submission}/approve', [EvidenceSubmissionController::class, 'approve'])->name('evidence.approve');
+Route::post('/evidence-submissions/{submission}/reject', [EvidenceSubmissionController::class, 'reject'])->name('evidence.reject');

@@ -1,0 +1,58 @@
+ONTRACK PROJECT INTELLIGENCE — SUBMISSION GUIDE v3.1
+Candidate: Sahanatur Rizki
+Working time: 5 hours 30 minutes
+Submission window: 21 November 2026
+
+DELIVERABLE CHECKLIST
+[o] Running frontend and backend/API (local setup is enough)
+[o] Persistence for follow-up records and statuses
+[o] Processing of provided CSV and JSON inputs (not hardcoded per-project results)
+[o] Portfolio, project details, evidence/source traceability, attention explanation
+[o] Create/update/view follow-up records
+[o] At least two meaningful automated tests + run instructions
+[o] README.md with install/run, architecture, API, data model, assumptions, limitations, time allocation
+[o] AI_USAGE.md (state none if no AI used)
+[o] PRESENTATION.pdf or PRESENTATION.pptx (maximum 10 slides)
+[o] Source code and dependency manifests; seed/import instructions if applicable
+
+SUGGESTED REPOSITORY STRUCTURE (OPTIONAL)
+/frontend
+/backend
+/tests
+/docs/PRESENTATION.pdf
+README.md
+AI_USAGE.md
+
+PRESENTATION — 15 MINUTES + 15 MINUTES Q&A
+Explain the business problem; user journey; data sources; solution architecture;
+what the application concludes and which evidence supports it; follow-up workflow;
+what you tested; trade-offs; known limitations; and next steps. Explain how you distinguish closing a follow-up from verifying that the underlying issue is resolved.
+Use screenshots and/or a live demo. Slide design is not graded as a visual-design task. You decide the slide structure; a fixed template is not required.
+
+FIVE REFLECTION QUESTIONS (ANSWER IN README OR SEPARATE FILE)
+1. Which parts of the source data are reports, which are operational evidence, and how do you distinguish them?
+2. When two sources differ, how does your system avoid making an unjustified claim?
+3. What would break first if the system handled 500 projects and daily updates? Why?
+4. How does a manager know who owns a follow-up, whether the action is closed, and whether the underlying issue is actually resolved?
+5. With two more days, what would you improve first and why?
+
+FAIRNESS & SCOPE
+No cloud deployment, paid service, AI model, production auth, or polished branding required.
+You may use libraries, documentation, and AI tools; disclose meaningful AI assistance.
+Do not publish any credentials. If incomplete, submit working parts and explain what remains.
+Do not fabricate source data or hide contradictory information to make the UI appear clean.
+
+FILES
+01_Candidate_Brief.pdf / .docx — same candidate instructions, two formats
+02_Project_Master.csv — original source
+03_Project_Updates.csv — original source
+04_Production_Data.json — original source
+05_Data_Dictionary.pdf — original reference
+06_Submission_Guide.txt — this guide
+07_OnTrack_Requirements_and_Data.xlsx — reference workbook and blank planning templates
+
+CHANGE READINESS (LIVE FOLLOW-UP, OUTSIDE TAKE-HOME TIME)
+A later technical session may introduce changed or additional data. You may be asked to explain the impact and make a limited live modification. No unseen data is required for the initial submission.
+
+DATA SOURCE RULE
+CSV/JSON files are the authoritative supplied input fixtures. The Excel workbook is a convenience reference and planning template, not an independent fourth source of truth.
